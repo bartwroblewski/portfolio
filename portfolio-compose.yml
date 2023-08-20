@@ -9,6 +9,8 @@ services:
     tty: true
 
   cv:
+    environment:
+        - FLASK_APP=cv/views.py
     build:
       context: ./cv
       dockerfile: Dockerfile
