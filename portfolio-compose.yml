@@ -8,6 +8,14 @@ services:
       - 8002:8000
     tty: true
 
+  strava_explorer:
+    build:
+      context: ./strava_explorer
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8003:8000
+    tty: true
+
   cv:
     environment:
         - FLASK_APP=cv/views.py
